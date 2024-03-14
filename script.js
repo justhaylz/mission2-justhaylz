@@ -8,9 +8,7 @@ function handleMouseMove(event) {
   const { clientX, clientY } = event;
   spotlightEl.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000ee 350px)`;
 }
-
 document.addEventListener("mousemove", handleMouseMove);
-console.log(spotlightEl);
 
 //==PASSWORD SECTION==//
 
@@ -49,44 +47,27 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-function submitForm() {
+//Submit LOOP SECTION//
   // Get form data
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   const message = document.getElementById("message").value;
-
-  // Create an array to store form data
+// Create an array to store form data
   const formDataArray = [];
-
+//Add function
+  function submitForm() {
+  //Prevent Default
+    //e.preventDefault ()
   // Add form data to the array
-  formDataArray.push(name);
-  formDataArray.push(email);
-  formDataArray.push(phone);
-  formDataArray.push(message);
+    formDataArray.push(name);
+    formDataArray.push(email);
+    formDataArray.push(phone);
+    formDataArray.push(message);
+  // Log each form field
+    formDataArray.forEach((index, data) => {
+      console.log(`Field ${index + 1}, ${data}`);
+  });
+};
 
-  const submitToAdd = {
-    name: submitE1.value,
-    email: submitE2.value,
-    phone: submit3.value,
-    message: submit4.value,
-  };
-
-  formDataArray.push(submitToAdd);
-
-  for (let i = 0; i < formDataArray.length; i++) {
-    console.log((submitToAdd += formDataArray[i]));
-  }
-}
-
-//  form.addEventListener('submit', function (event) {
-//     for (i = 0; i < form.elements.length; i++);
-
-// const input = form.elements[i];
-
-//      if (input.elements === "INPUT") {
-//        form.push(input.value);
-//      }
-//    }
-//  );
-//  console.log(form);
+submitForm ()
