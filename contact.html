@@ -1,58 +1,127 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-<!--CSS-->
-    <link href="mission2.css" rel="stylesheet">
-<!--JAVASCRIPT-->
-    <script src="script.js" defer></script>
-<!--FONT AWESOME AMD GOGGLE FONT LINK-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-<!--INTERNAL CSS STYLE-->
+    <!--CSS-->
+    <link href="mission2.css" rel="stylesheet" />
+    <!--FONT AWESOME AMD GOGGLE FONT LINK-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--INTERNAL CSS STYLE-->
     <style>
-        h1 {
-            font-size: 23px;
-            font-weight: 600;
-            color: white;
-        }
+      h1 {
+        font-size: 23px;
+        font-weight: 600;
+        color: white;
+      }
     </style>
-</head>
-<body>
-<!--HEADER-->
+  </head>
+  <body>
+    <!--HEADER-->
     <header>
-<!--NAV BAR-->
-            <div class="container">
-                <div class="navbar">
-                    <div class="logo">Hayley Smith</div>
-                    <nav class="rightnav">
-                        <ul class="nav-links">
-                            <li><a id="#" href="mission2.html">Home</a></li>
-                            <li><a id="aboutme" href="aboutme.html">About Me</a></li>
-                            <li><a id="education" href="education.html">Education</a></li>
-                            <li><a id="experience" href="experience.html">Experience</a></li>
-                            <li><a href="Hayley Smith CV.pdf" download="Hayley Smith CV">Curriculum Vitae</a></li>
-                            <li><a id="contact" href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+      <!--NAV BAR-->
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">Hayley Smith</div>
+          <nav class="rightnav">
+            <ul class="nav-links">
+              <li><a id="#" href="mission2.html">Home</a></li>
+              <li><a id="aboutme" href="aboutme.html">About Me</a></li>
+              <li><a id="education" href="education.html">Education</a></li>
+              <li><a id="experience" href="experience.html">Experience</a></li>
+              <li>
+                <a href="Hayley-Smith-CV.pdf" download="Hayley Smith CV"
+                  >Curriculum Vitae</a
+                >
+              </li>
+              <li><a id="contact" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-<!--EMAIL FORM SECTION-->
-        <form action="mailto:miss_hailz@hotmail.com" method="post">
-            <h1>Contact Me</h1>
-            <label>Name:<input id="name" type="text" name="name" autocomplete="name"></label><br/>
-            <br/>
-            <label>Email:<input id="email" type="email" name="email" autocomplete="email"></label><br/>
-            <br/>
-<!--SUBMIT BUTTON-->
-            <input type="submit" value="submit"/>
-        </form>
-</body>
-<!--FOOTER-->
-<footer>
+    <!--FORM SECTION-->
+
+        <img src="MR1-Images/shape.png" class="square" alt="" />
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <div class="info">
+              <div class="information">
+                <img src="MR1-Images/location.png" class="icon" alt="" />
+                <p>71A Settlement Road, Papakura, Auckland 2110</p>
+              </div>
+              <div class="information">
+                <img src="MR1-Images/email.png" class="icon" alt="" />
+                <p>miss_hailz@hotmail.com</p>
+              </div>
+              <div class="information">
+                <img src="MR1-Images/phone.png" class="icon" alt="" />
+                <p>021-0298-2322</p>
+              </div>
+            </div>
+            <div class="social-media">
+              <p>Connect with me :</p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/haylzb2/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/babyyhaylz/">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hayley-smith-818a3513a/">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="myform">
+              <h3 class="title">Contact Me</h3>
+              <div class="input-container">
+                <input type="text" id="name" class="input" autocomplete="on"/>
+                <label for="name">Name</label>
+                <span>Name</span>
+              </div>
+              <div class="input-container">
+                <input type="email" id="email" class="input" autocomplete="on"/>
+                <label for="email">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" id="phone" class="input" autocomplete="on"/>
+                <label for="phone">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea id="message" class="input" autocomplete="on"></textarea>
+                <label for="message">Message</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" class="btn" onclick="submit()"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    <!--FLASHLIGHT EFFECT-->
+    <div id="spotlight"></div>
+    <!--JS SCRIPT-->
+    <script src="script.js" defer></script>
+  </body>
+  <!--FOOTER-->
+  <footer>
     <h5>Copyright 2024 by Hayley Smith. All rights reserved.</h5>
-</footer>
+  </footer>
 </html>
